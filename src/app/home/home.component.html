@@ -4,10 +4,10 @@
     <p>Aggiungi un obbiettivo</p>
 </div>
 <div class="col">
-  <p>I tuoi obbiettivi ({{ itemCount}})  </p>
+  <p>I tuoi obbiettivi ({{ itemCount }})</p>
 </div>
 </div>
-  <div class="container color-light" [@goals]="goals.length">
+  <div class="container color-light" [@goals]="goals">
     <div class="col">
       <p>Usa questo per aggiungere un obbietivo di cio' che vuoi realizzare </p>
 
@@ -17,15 +17,9 @@
       </form>
 
     </div>
-
-
-
-
     <div class="col">
-      <p class="life-conteiner" *ngFor="let goal of goals; let i = index" (click)="removeItem(i)">
-        {{ goal}}
-
-
+      <p class="life-container" *ngFor="let goal of goals; let i = index" (click)="removeItem(i)">
+        {{ goal }}
       </p>
     </div>
   </div>
